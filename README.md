@@ -14,7 +14,7 @@
 
 # 💻 Installation
 
-😀The installation is tested with NVIDIA Driver `550.90.07` , CUDA `11.8` and `setuptools==75.1.0` in Ubuntu `20.04.6 LTS`. 
+😀The installation is tested with NVIDIA Driver `550.67` , CUDA `11.8` and `setuptools==75.1.0` in Ubuntu `22.04.5 LTS`. 
 
 [1] Clone our repository from Github by HTTPS: 
 
