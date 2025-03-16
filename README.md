@@ -8,7 +8,7 @@
 
 # Overview
 
-<img src="figures/README/head_figure.png" style="zoom:50%;" />
+<img src="asset/head_figure.png" style="zoom:50%;" />
 
 ---
 
