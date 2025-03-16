@@ -1,0 +1,11 @@
+load_pipeline: True
+
+# SD 2.1
+pipeline_type: StableDiffusionPipeline
+pipeline_path: /root/autodl-tmp/stabilityai/stable-diffusion-2-1-base
+torch_dtype: float16
+variant: fp16
+
+scheduler: "DDIMScheduler"
+# scheduler: "DDPMScheduler"
+# scheduler: "PNDMScheduler"

@@ -1,0 +1,16 @@
+name: cal_importance-run_cal_importance_weight
+
+category_root_path: ./tmp/importance_probe/run_sd_family/anime/sd-turbo/step-2_seed-42
+
+vote_num_round: 15
+
+reverse_ranking: False
+# reverse_ranking: True
+
+importance_weight:
+  low_importance_weight: 0.95
+
+  high_importance_weight: 1.1
+
+importance_weight_matrix:
+  save_importance_weight_matrix: True

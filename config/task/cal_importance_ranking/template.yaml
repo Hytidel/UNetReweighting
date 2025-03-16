@@ -1,0 +1,18 @@
+name: cal_importance-cal_importance_ranking
+
+folder_root_path: ./tmp/importance_probe/sd_family/sd/step-20_seed-0/some_cut_up_fruit
+# folder_root_path: ./tmp/importance_probe/sdxl_family/sdxl/step-20_seed-0/some_cut_up_fruit
+
+eps: 1e-6
+
+importance_score:
+  save_importance_score: True
+  save_prefix_importance_score: True
+
+importance_ranking:
+  save_importance_ranking: True
+  save_prefix_importance_ranking: True
+
+skipping_stategy:
+  save_strategy_skip_1: True
+  save_strategy_skip_2: True

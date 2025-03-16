@@ -1,0 +1,40 @@
+name: plot-heatmap_importance_score
+
+sd_type: "sd-turbo"
+# sd_type: "sdxl-turbo"
+# sd_type: "sd"
+# sd_type: "sdxl"
+
+# 2 steps
+importance_score_path: ./tmp/res-some_cut_up_fruit/score/sd-turbo_score.yaml
+# importance_score_path: ./tmp/res-some_cut_up_fruit/score/sdxl-turbo_score.yaml
+
+# 20 steps
+# importance_score_path: ./tmp/res-some_cut_up_fruit/score/sd_score.yaml
+# importance_score_path: ./tmp/res-some_cut_up_fruit/score/sdxl_score.yaml
+
+num_vote_round: 15
+
+heatmap:
+  # SD-Turbo
+  figsize: 
+    - 10
+    - 10
+
+  # SDXL-Turbo
+  # figsize: 
+  #   - 8
+  #   - 8
+
+  # 20 steps
+  # figsize: 
+  #   - 8
+  #   - 14
+
+  color_mapping: "viridis"
+  # color_mapping: "plasma"
+  # color_mapping: "hot"
+
+save_plot:
+  save_plot_root_path: "./tmp/plot/heatmap_importance_score"
+

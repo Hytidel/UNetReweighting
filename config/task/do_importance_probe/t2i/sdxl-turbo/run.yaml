@@ -1,0 +1,51 @@
+name: do_importance_probe-t2i-run_sdxl_family
+
+sdxl_type: sdxl-turbo
+
+prompt: 
+  # prompt_json_path: "/root/autodl-tmp/zhwang/HPDv2/benchmark/anime.json"
+  # prompt_json_path: "/root/autodl-tmp/zhwang/HPDv2/benchmark/concept-art.json"
+  # prompt_json_path: "/root/autodl-tmp/zhwang/HPDv2/benchmark/paintings.json"
+  prompt_json_path: "/root/autodl-tmp/zhwang/HPDv2/benchmark/photo.json"
+
+  # prompt_batch_size: 1
+  prompt_batch_size: 3  # num_sample_per_prompt = 1
+
+  prompt_set_size: 200
+
+task:
+  prompt_2: None
+  negative_prompt: "low quality, blurry, ugly, oversaturated"
+  negative_prompt_2: None
+
+  height: 1024
+  width: 1024
+
+  num_inference_step: 2
+  guidance_scale: 0
+
+save_sample:
+  save_sample_root_path: ./tmp/importance_probe/run_sdxl_family
+
+  num_sample_per_prompt: 1
+  batch_size: 5
+
+  folder_name: None
+
+task_seed:
+  # random_seed: True
+  random_seed: False
+
+  # [l, r)
+  seed_range_l: 0
+  seed_range_r: 1024
+
+importance_probe:
+  num_round: 15  # recommend: `num_round >= 15`
+  num_epoch: 20  # recommend: `num_epoch >= 20`
+
+  chart:
+    update_chart_in_process: False
+
+    num_row: 1
+    num_col: 2

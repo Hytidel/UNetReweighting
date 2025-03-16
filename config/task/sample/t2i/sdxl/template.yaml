@@ -1,0 +1,70 @@
+name: sample-t2i-sdxl_family
+
+task:
+  prompt: "An English woman plays the lute with a slender neck and long dark hair in a painting by WilliamAdolphe Bouguereau."
+  prompt_2: None
+  negative_prompt: "low quality, blurry, ugly, oversaturated"
+  negative_prompt_2: None
+
+  height: 1024
+  width: 1024
+
+  num_inference_step: 15
+  guidance_scale: 4.5
+
+  batch_size: 5
+
+task_seed:
+  random_seed: True
+  # random_seed: False
+
+  # [l, r)
+  seed_range_l: 0
+  seed_range_r: 1024
+
+save_sample:
+  save_sample_root_path: ./tmp/sample/sdxl_family
+  category_name: None
+
+  num_sample_per_prompt: 5
+  sample_start_idx: 0
+
+  save_process_png: True
+  # save_process_png: False
+
+weight_matrix:
+  # ---------= [static] =---------
+  # load_weight_matrix: "static"
+
+  static_weight_matrix:
+    block_idx_list: 0  # [0, 1, 2, 3, 4, 5]
+    block_weight: 1.1
+
+  # ---------= [False] =---------
+  load_weight_matrix: False
+
+  default_weight_matrix: 1.0
+
+  # ---------= [True] =---------
+  # load_weight_matrix: True
+
+  load_weight_matrix_path: ./tmp/weight_matrix/x.yaml
+
+unet: 
+  load_unet_ckpt: False
+  # load_unet_ckpt: True
+
+  unet_ckpt_path: ./tmp/x
+  
+skipping_strategy:
+  # ---------= [static] =---------
+  # load_weight_threshold_matrix: "static"
+  skip_block_idx_list: 
+    - 0
+
+  # ---------= [True] =---------
+  # load_weight_threshold_matrix: True
+  weight_threshold_matrix_path: ./tmp/x
+
+  # ---------= [False] =---------
+  load_weight_threshold_matrix: False

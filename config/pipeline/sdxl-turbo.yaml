@@ -1,0 +1,12 @@
+load_pipeline: True
+
+# SD-Turbo
+pipeline_type: StableDiffusionXLPipeline
+pipeline_path: /root/autodl-tmp/stabilityai/sdxl-turbo
+torch_dtype: float16
+variant: fp16
+
+scheduler: "DDIMScheduler"
+# scheduler: "DDPMScheduler"
+# scheduler: "EulerDiscreteScheduler"
+# scheduler: "PNDMScheduler"

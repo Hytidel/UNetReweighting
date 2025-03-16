@@ -1,0 +1,97 @@
+name: do_importance_probe-t2i-sd_family
+
+task:
+  prompt: "Some cut up fruit is sitting in a blender."
+  negative_prompt: "low quality, blurry, ugly, oversaturated"
+
+  height: 512
+  width: 512
+
+  num_inference_step: 20
+  guidance_scale: 7
+
+save_sample:
+  save_sample_root_path: ./tmp/importance_probe/sd_family
+
+  num_sample_per_prompt: 1
+  batch_size: 5
+
+  prompt_idx: 0
+  folder_name: None
+
+task_seed:
+  # random_seed: True
+  random_seed: False
+
+  # [l, r)
+  seed_range_l: 0
+  seed_range_r: 1024
+
+importance_probe:
+  num_round: 15
+  num_epoch: 20
+
+  noise_pred_loss_threshold:
+    # ---------= [list] =---------
+    # threshold_strategy: list  # ["list", "linear"]
+    threshold_list: None
+
+    # ---------= [linear] =---------
+    threshold_strategy: linear  # ["list", "linear"]
+
+    threshold_st: 1e-4
+    threshold_ed: 2e-4
+
+  weight_max_bias_strategy:
+    # ---------= [list] =---------
+    # bias_strategy: list  # ["list", "linear"]
+    bias_list: None
+
+    # ---------= [linear] =---------
+    bias_strategy: linear  # ["list", "linear"]
+
+    bias_st: 0.02
+    bias_ed: 0.05
+
+  weight_threshold_update_strategy:
+    # update_strategy: hard  # ["hard", "soft", "probability"]
+    # update_strategy: soft  # ["hard", "soft", "probability"]
+    update_strategy: probability  # ["hard", "soft", "probability"]
+    update_eps: 1e-2
+
+    # probability
+    sample_accepted:
+      threshold_high: 0.06
+      threshold_moderate_st: 0.47
+      threshold_moderate_ed: 0.84
+      threshold_low_st: 0.47
+      threshold_low_ed: 0.10
+    sample_rejected:
+      threshold_high_st: 0.48
+      threshold_high_ed: 0.30
+      threshold_moderate_st: 0.48
+      threshold_moderate_ed: 0.66
+      threshold_low: 0.04
+
+  weight_threshold_matrix:
+    save_last_weight_threshold_matrix_per_epoch: False
+    save_history_weight_threshold_matrix_list: True
+
+  chart:
+    update_chart_in_process: True
+    update_chart_epoch_interval: 1
+    figsize_per_chart: 
+      - 10  # width
+      - 8  # height
+    marker_list:
+      - 'o'
+      - 's'
+      - '*'
+      - 'x'
+      - '*'
+      - 's'
+      - 'o'
+    
+    # SD inference_step = 20
+    num_row: 4
+    num_col: 5

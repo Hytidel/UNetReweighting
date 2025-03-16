@@ -1,0 +1,20 @@
+name: cal_metric-run_cal_fid_lpips
+
+sd_type: "sd-turbo"
+
+split: "training"
+# split: "test"
+
+img:
+  folder_root_path: ./tmp/sample/sd_family/sd-turbo/step-2_seed-42/some_cut_up_fruit/png
+  # folder_root_path: ./tmp/sample/sd_family/sd-turbo/step-2_seed-21/some_cut_up_fruit/png
+
+  img_size: 512
+
+fid:
+  feature_dim: 2048
+  batch_size: 1024
+  num_worker: 1
+
+lpips:
+  model_net: "alex"  # ["alex", "vgg"]

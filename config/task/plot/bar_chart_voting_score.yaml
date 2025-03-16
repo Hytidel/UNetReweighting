@@ -1,0 +1,30 @@
+name: plot-bar_chart_voting_score
+
+sd_type: "sd-turbo"
+# sd_type: "sd"
+# sd_type: "sdxl-turbo"
+# sd_type: "sdxl"
+
+importance_score_path: ./tmp/res-some_cut_up_fruit/score/sd-turbo_score.yaml
+# importance_score_path: ./tmp/res-some_cut_up_fruit/score/sd_score.yaml
+# importance_score_path: ./tmp/res-some_cut_up_fruit/score/sdxl-turbo_score.yaml
+# importance_score_path: ./tmp/res-some_cut_up_fruit/score/sdxl_score.yaml
+
+num_vote_round: 15
+
+bar_chart:
+  figsize: 
+    - 10
+    - 10
+
+  bar_color_list:
+    - "#ff99c8"
+    - "#a2d2ff"
+    - "#cdb4db"
+    - "#87b59a"
+    - "#cdb4db"
+    - "#a2d2ff"
+    - "#ff99c8"
+
+save_plot:
+  save_plot_root_path: "./tmp/plot/bar_chart_voting_score"

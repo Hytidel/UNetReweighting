@@ -1,0 +1,56 @@
+name: do_pruning-sdxl_family
+
+task:
+  prompt: "some cut up fruit is sitting in a blender"
+  prompt_2: None
+  negative_prompt: "low quality, blurry, ugly, oversaturated"
+  negative_prompt_2: None
+
+  height: 1024
+  width: 1024
+
+  num_inference_step: 2
+  guidance_scale: 0
+
+  num_sample_per_prompt: 100
+
+  batch_size: 8
+
+task_seed:
+  # random_seed: True
+  random_seed: False
+
+  # [l, r)
+  seed_range_l: 0
+  seed_range_r: 1024
+
+skipping_strategy:
+  # ---------= [static] =---------
+  load_weight_threshold_matrix: "static"
+  skip_block_idx_list: 
+    - 0
+
+  # ---------= [True] =---------
+  # load_weight_threshold_matrix: True
+  weight_threshold_matrix_path: ./tmp/importance_probe/run_sdxl_family/photo/sdxl-turbo/step-2_seed-42/some_cut_up_fruit/skipping_strategy/skip-1/skip-1_0.yaml
+
+  # ---------= [False] =---------
+  # load_weight_threshold_matrix: False
+
+save_sample:
+  save_sample_root_path: ./tmp/do_pruning/sdxl_family
+
+do_pruning:
+  num_epoch: 300
+
+  finetune:
+    lr: 5e-6
+    optim: Adam
+    criterion: L2
+
+  training_loss_list:
+    save_training_loss_list_in_process: True
+    save_training_loss_list_epoch_interval: 1
+
+  model_ckpt:
+    save_model_ckpt_start_epoch: None

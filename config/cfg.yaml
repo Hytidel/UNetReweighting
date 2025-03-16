@@ -1,0 +1,15 @@
+exp_name: 
+  default_exp_name: "exp"
+  add_timestamp: True
+
+seed: 42
+
+enable_pause: True
+
+concurrent_max_worker: None
+# concurrent_max_worker: 4
+
+defaults:
+  - task: None
+  - pipeline: sd-turbo
+  - _self_

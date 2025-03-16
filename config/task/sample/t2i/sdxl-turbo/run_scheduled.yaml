@@ -1,0 +1,50 @@
+name: sample-t2i-run_scheduled_sdxl_family
+
+sdxl_type: sdxl-turbo
+
+prompt:
+  # prompt_json_path: "/root/autodl-tmp/zhwang/HPDv2/benchmark/anime.json"
+  # prompt_json_path: "/root/autodl-tmp/zhwang/HPDv2/benchmark/concept-art.json"
+  # prompt_json_path: "/root/autodl-tmp/zhwang/HPDv2/benchmark/paintings.json"
+  prompt_json_path: "/root/autodl-tmp/zhwang/HPDv2/benchmark/photo.json"
+
+  # prompt_batch_size: 1
+  prompt_batch_size: 3
+
+  prompt_set_size: 200
+
+task:
+  prompt_2: None
+  negative_prompt: "low quality, blurry, ugly, oversaturated"
+  negative_prompt_2: None
+
+  height: 1024
+  width: 1024
+
+  num_inference_step: 2
+  guidance_scale: 0
+
+  batch_size: 5
+
+task_seed:
+  random_seed: True
+  # random_seed: False
+
+  # [l, r)
+  # seed_range_l: 0
+  # seed_range_r: 1024
+
+  seed_range_l: 42
+  seed_range_r: 42
+
+save_sample:
+  save_sample_root_path: ./tmp/sample/run_sdxl_family
+
+  num_sample_per_prompt: 1
+  sample_start_idx: 0
+
+  save_process_png: True
+  # save_process_png: False
+
+weight_matrix:
+  weight_matrix_name: "0.95_1.1"

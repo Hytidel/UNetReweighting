@@ -1,0 +1,18 @@
+name: cal_metric-run_cal_hpsv2
+
+hps_v2:
+  hps_model_ckpt_path: /root/autodl-tmp/zhwang/HPDv2/HPS_v2_compressed.pt
+  ViT_model_ckpt_path: /root/autodl-tmp/laion/CLIP-ViT-H-14-laion2B-s32B-b79K/open_clip_pytorch_model.bin
+  
+  prompt_batch_size: 1
+
+img_root_path:
+  category_root_path: ./tmp/sample/sd_family/sd-turbo/step-2_seed-42
+  # category_root_path: ./tmp/sample/run_sd_family/sd-turbo/step-2_seed-42/anime
+
+  weight_matrix_name: default
+  # weight_matrix_name: "0.98_1.1"
+
+sample:
+  num_sample: 1
+  # num_sample: 20

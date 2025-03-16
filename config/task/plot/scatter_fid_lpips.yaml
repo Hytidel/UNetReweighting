@@ -1,0 +1,42 @@
+name: plot-scatter_fid_lpips
+
+sd_type: "sd-turbo"
+# sd_type: "sd"
+# sd_type: "sdxl-turbo"
+# sd_type: "sdxl"
+
+data:
+  pruning_res_dict_path: ./tmp/sample/sd_family/sd-turbo/step-2_seed-42/some_cut_up_fruit/png/sd-turbo.yaml
+  # pruning_res_dict_path: ./tmp/sample/sd_family/sd-turbo/step-2_seed-21/some_cut_up_fruit/png/sd-turbo.yaml
+
+  split: "training"
+  # split: "test"
+
+  num_skipped_block: 1
+  # num_skipped_block: 2
+
+  duplicate_dict:
+    skip_1:
+      - - "b.1"
+        - "a.0"
+      - - "b.2"
+        - "a.1"
+    skip_2: None
+
+scatter:
+  figsize: 
+    - 5
+    - 5
+
+  marker_dict:
+    baseline: 'o'
+    ours: '^'
+    duplicate: '*'
+
+  color_dict:
+    baseline: "#6976f7"
+    ours: "#ffacd6"
+    duplicate: "#c078d8"
+
+save_plot:
+  save_plot_root_path: "./tmp/plot/scatter_fid_lpips"

@@ -1,0 +1,28 @@
+# keys
+keys.md
+
+# tmp file
+tmp
+outputs
+multirun
+__pycache__
+*/__pycache__
+
+# dataset
+data
+data.zip
+dataset
+
+# script
+script/watch_nvidia_smi.sh
+script/update_code.sh
+script/tmp_0.sh
+script/tmp_1.sh
+script/tmp_2.sh
+script/tmp_3.sh
+
+# others
+pip_list.txt
+sleep.py
+*.zip
+discarded
