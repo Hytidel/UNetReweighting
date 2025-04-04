@@ -2,7 +2,7 @@
 
 [Xi Wang](https://hytidel.github.io/), Ziqi He, [Yang Zhou](https://zhouyangvcc.github.io/)$^\dagger$​
 
-[Paper (including Appendix)]() | [arXiv]() |[Code](https://github.com/Hytidel/UNetReweighting)
+[Paper (including Appendix)](https://drive.google.com/drive/folders/1c01J3lUK-m5UZYaF35THWxCBgg50C0IV?usp=sharing) | [arXiv (main paper only)]() |[Code](https://github.com/Hytidel/UNetReweighting)
 
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FHytidel%2FUNetReweighting&count_bg=%23AD005B&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
