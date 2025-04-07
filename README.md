@@ -98,7 +98,15 @@ Our code is built upon [Human Preference Score v2](https://github.com/tgxs002/HP
 If you find our work helpful, please consider citing: 
 
 ```
-TODO
+@misc{wang2025dynamicimportancediffusionunet,
+      title={Dynamic Importance in Diffusion U-Net for Enhanced Image Synthesis}, 
+      author={Xi Wang and Ziqi He and Yang Zhou},
+      year={2025},
+      eprint={2504.03471},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2504.03471}, 
+}
 ```
 
 # 🏷️ License
