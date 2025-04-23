@@ -44,7 +44,7 @@ pip install torch==2.3.1 torchvision==0.18.1
 [4] Install the dependencies. 
 
 ```bash
-pip install -r requirements.txt
+pip install -r requirement.txt
 ```
 
 # 🏞️ Models \& Checkpoints
